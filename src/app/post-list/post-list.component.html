@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Articles publiés </h2>
+    
+    <ul class="list-group">
+        <app-post-list-item 
+                            *ngFor = "let post of posts; let i = index"
+                            [indexOfPost]="i"
+                            [title]="post.title"
+                            [description]="post.content"
+                            [loveIts]="post.loveIts"></app-post-list-item>
+    </ul>
+</div>

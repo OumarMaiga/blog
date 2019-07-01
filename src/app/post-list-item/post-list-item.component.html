@@ -1,0 +1,12 @@
+<div class="container">
+    <li [ngClass]="{'group-list-item': true,
+                    'list-group-item-success': loveIts > 0,
+                    'list-group-item-danger': loveIts < 0 }">
+        <div class="container-fluid">
+            <h3 [ngStyle]="{color: getColor()}">{{ title }} <i style="margin-left: 50%">{{ lastUpdate | date: 'short' }}</i></h3>
+            <p>{{ description }}</p>
+            <button class="btn btn-success" (click)="onLoveIt()">Love it</button>
+            <button class="btn btn-danger" (click)="onDontLoveIt()">Don't love it</button>
+        </div>
+    </li>
+</div>
